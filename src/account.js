@@ -19,6 +19,11 @@ Account.prototype = {
 
   withdraw(money, date = new Date()) {
     this.balance -= money;
+    this.transactions.push({
+      date: date,
+      amount: -money,
+      balance: this.getBalance(),
+    });
   },
 
 

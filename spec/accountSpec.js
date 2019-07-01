@@ -15,7 +15,6 @@ describe("Bank Account", function(){
     });
     it("saves the date, deposit amount and balance when money is deposited", function() {
       account.deposit(100.00, '01/07/2019')
-      expect(account.getBalance()).toEqual(100.00)
       expect(account.getTransactions()).toEqual([{date: '01/07/2019', amount: 100.00, balance: 100.00}])
     });
   });
@@ -25,6 +24,11 @@ describe("Bank Account", function(){
       account.deposit(100.00, '01/07/2019')
       account.withdraw(50.00, '02/07/2019')
       expect(account.getBalance()).toEqual(50.00)
+    });
+    it("saves the date, deposit amount and balance when money is withdrawn", function() {
+      account.deposit(100.00, '01/07/2019')
+      account.withdraw(50.00, '02/07/2019')
+      expect(account.getTransactions()).toEqual([{date: '01/07/2019', amount: 100.00, balance: 100.00}, {date: '02/07/2019', amount: -50.00, balance: 50.00}])
     });
   });
 
