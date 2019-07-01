@@ -20,4 +20,12 @@ describe("Bank Account", function(){
     });
   });
 
+  describe("#withdraw", function() {
+    it("allows user to withdraw money", function() {
+      account.deposit(100.00, '01/07/2019')
+      account.withdraw(50.00)
+      expect(account.getBalance()).toEqual(50.00)
+    });
+  });
+
 });
