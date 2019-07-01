@@ -31,5 +31,4 @@ describe("Bank Account", function(){
       expect(account.getTransactions()).toEqual([{date: '01/07/2019', amount: 100.00, balance: 100.00}, {date: '02/07/2019', amount: -50.00, balance: 50.00}])
     });
   });
-
 });
