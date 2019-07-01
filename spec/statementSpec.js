@@ -8,5 +8,8 @@ describe("Bank Statement", function() {
     it("initializes with an account", function() {
       expect(statement.account).toEqual(account)
     });
+    it("shows the balance of the account", function() {
+      expect(statement.account.balance).toEqual(0)
+    });
   });
 });

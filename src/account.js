@@ -26,7 +26,6 @@ Account.prototype = {
     });
   },
 
-
   getTransactions() {
     return this.transactions;
   },
