@@ -3,19 +3,26 @@ function Account() {
   this.transactions = [];
 };
 
-Account.prototype.getBalance = function() {
-  return this.balance;
-};
+Account.prototype = {
+  getBalance() {
+    return this.balance;
+  },
 
-Account.prototype.deposit = function(money, date = new Date()) {
-  this.balance += money;
-  this.transactions.push({
-    date: date,
-    amount: money,
-    balance: this.getBalance()
-  });
-};
+  deposit(money, date = new Date()) {
+    this.balance += money;
+    this.transactions.push({
+      date: date,
+      amount: money,
+      balance: this.getBalance(),
+    });
+  },
 
-Account.prototype.getTransactions = function() {
-  return this.transactions;
-}
+  withdraw(money, date = new Date()) {
+    this.balance -= money;
+  },
+
+
+  getTransactions() {
+    return this.transactions;
+  },
+};
