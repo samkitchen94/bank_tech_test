@@ -2,6 +2,7 @@ describe("Bank Account", function(){
   beforeEach(function() {
     account = new Account()
   });
+  
   describe("#getBalance", function() {
     it("initializes with a balance of 0", function() {
       expect(account.getBalance()).toEqual(0)

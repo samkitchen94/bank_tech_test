@@ -1,12 +1,21 @@
 # Bank tech test
 
-Today, you'll practice doing a tech test.
+## Introduction
+This is the first of 3 practice tech tests as part of week 10 at makers. I decided to do this in Javascript as this is the language I am least comfortable with so far.
 
-For most tech tests, you'll essentially have unlimited time. This practice session is about producing the best code you can when there is a minimal time pressure.
+My approach was to use TDD to solve the below problem using jasmine as my testing framework, and so that my solution fits the requirements and acceptance criteria below.
 
-You'll get to practice your OO design and TDD skills.
+The app is only available to interact with through the console in your browser as per the instructions below.
 
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+## Instructions for use
+- In the command line, run:
+```
+git clone https://github.comsamkitchen94bank_tech_test.git
+```
+- Then switch to this directory and run the below in the command line to view the tests:
+```
+open specRunner.html
+```
 
 ## Specification
 

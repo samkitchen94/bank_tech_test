@@ -19,6 +19,6 @@ describe("Bank Statement", function() {
       statement.account.withdraw(50.00, '13/07/2019')
       expect(statement.showTransactions()).toEqual(
         "date || credit || debit || balance\n13/07/2019 || || 50.00 || 50.00\n12/07/2019 || 100.00 || || 100.00\n")
-    })
-  })
+    });
+  });
 });
