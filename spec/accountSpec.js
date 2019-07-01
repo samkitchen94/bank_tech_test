@@ -2,18 +2,22 @@ describe("Bank Account", function(){
   beforeEach(function() {
     account = new Account()
   });
-
-  it("initializes with a balance of 0", function() {
-    expect(account.getBalance()).toEqual(0)
+  describe("#getBalance", function() {
+    it("initializes with a balance of 0", function() {
+      expect(account.getBalance()).toEqual(0)
+    });
   });
 
-  it("allows user to deposit money", function() {
-    account.deposit(100.00, "1/07/2019")
-    expect(account.getBalance()).toEqual(100.00)
+  describe("#deposit", function() {
+    it("allows user to deposit money", function() {
+      account.deposit(100.00, "1/07/2019")
+      expect(account.getBalance()).toEqual(100.00)
+    });
+    it("saves the date, deposit amount and balance when money is deposited", function() {
+      account.deposit(100.00, '01/07/2019')
+      expect(account.getBalance()).toEqual(100.00)
+      expect(account.getTransactions()).toEqual([{date: '01/07/2019', amount: 100.00, balance: 100.00}])
+    });
   });
 
-  it("saves the date, deposit amount and balance when money is deposited", function() {
-    account.deposit(100.00, '01-07-2019')
-    expect(account.getTransactions()).toEqual([{date: '01-07-2019', amount: 100.00, balance: 100.00}])
-  });
 });
